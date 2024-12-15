@@ -40,12 +40,12 @@ SMART_MED is a comprehensive diabetes management system that helps track and vis
 - **Backend**
   - Node.js
   - Express.js
-  - MongoDB for database
+  - MySQL for database
   - JWT for authentication
 
 ## Prerequisites
 - Node.js (v14 or higher)
-- MongoDB (v4.4 or higher)
+- MySQL (v8.0 or higher)
 - npm or yarn package manager
 
 ## Installation
@@ -64,7 +64,10 @@ npm install
 3. Create a .env file in the backend directory with the following variables:
 ```env
 PORT=5000
-MONGODB_URI=your_mongodb_connection_string
+DB_HOST=localhost
+DB_USER=your_database_user
+DB_PASSWORD=your_database_password
+DB_NAME=smart_med
 JWT_SECRET=your_jwt_secret
 ```
 
@@ -150,7 +153,11 @@ SMART_MED/
 ### Backend (.env)
 ```env
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/smart_med
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=your_database_user
+DB_PASSWORD=your_database_password
+DB_NAME=smart_med
 JWT_SECRET=your_secret_key
 NODE_ENV=development
 ```
